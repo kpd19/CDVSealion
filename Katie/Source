@@ -1,0 +1,40 @@
+# epsilons <- c(0, 0.25, 0.5, 1, 2)
+#dogs1 <- 50
+#sealions2 <- 50
+
+for (i in 1:length(epsilons)) {
+  source("Set.R")
+  epsilon_D <- epsilons[i]
+  source("Run.R")
+    }
+
+
+source("Set.R")
+epsilon_D <- epsilons[1] # spatial decay for dogs
+epsilon_SL <- epsilons[1] # spatial decay for sea lions
+source("Run.R")
+print(total.time)
+
+source("Set.R")
+epsilon_D <- epsilons[2] # spatial decay for dogs
+epsilon_SL <- epsilons[2] # spatial decay for sea lions
+source("Run.R")
+print(total.time)
+
+source("Set.R")
+epsilon_D <- epsilons[3] # spatial decay for dogs
+epsilon_SL <- epsilons[3] # spatial decay for sea lions
+source("Run.R")
+print(total.time)
+
+source("Set.R")
+epsilon_D <- epsilons[4] # spatial decay for dogs
+epsilon_SL <- epsilons[4] # spatial decay for sea lions
+source("Run.R")
+print(total.time)
+
+source("Set.R")
+epsilon_D <- epsilons[5] # spatial decay for dogs
+epsilon_SL <- epsilons[5] # spatial decay for sea lions
+source("Run.R")
+print(total.time)
