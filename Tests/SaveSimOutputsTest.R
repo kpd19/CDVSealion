@@ -23,6 +23,7 @@
 		size.length <- length(arr.size)
 
 # 2. loop over parameters and save data as .rda
+	# 2.1 WITH CREATING FOLDERS (by grid size)
 	for(k in 1:size.length){
 		cells <- dim(arr.size[[k]])[1]*dim(arr.size[[k]])[2]
 		dir.create(paste(save.dir, "/", cells, ".cells" , sep = ""))
@@ -31,7 +32,20 @@
 			for(i in 1:mult.length){
 				arr.run.mult <- arr.run.add*arr.mult[i]
 				name <- paste(j, ".add", i, ".mult", sep = "")
-				save(arr.run.mult, file = paste(save.dir,  "/", cells[1], ".cells" , "/", name, ".rda", sep = ""))
+				save(arr.run.mult, file = paste(save.dir,  "/", cells[1], ".cells", "/" , name, ".rda", sep = ""))
 			}
 		}
-	}
+	 }
+
+	# 2.2 WITHOUT CREATING FOLDERS
+	for(k in 1:size.length){
+		cells <- dim(arr.size[[k]])[1]*dim(arr.size[[k]])[2]
+		for(j in 1:add.length){
+			arr.run.add <- arr.size[[k]] + arr.add[j]
+			for(i in 1:mult.length){
+				arr.run.mult <- arr.run.add*arr.mult[i]
+				name <- paste(j, ".add", i, ".mult", sep = "")
+				save(arr.run.mult, file = paste(save.dir,  "/", cells[1], ".cells" , name, ".rda", sep = ""))
+			}
+		}
+	 }
