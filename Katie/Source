@@ -2,11 +2,11 @@
 #dogs1 <- 50
 #sealions2 <- 50
 
-for (i in 1:length(epsilons)) {
-  source("Set.R")
-  epsilon_D <- epsilons[i]
-  source("Run.R")
-    }
+#for (i in 1:length(epsilons)) {
+#  source("Set.R")
+#  epsilon_D <- epsilons[i]
+#  source("Run.R")
+#    }
 
 
 source("Set.R")
