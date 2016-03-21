@@ -77,8 +77,13 @@
 	huns <- stats.arr[which(rownames(stats.arr)=="D_SL"), which(colnames(stats.arr)=="end.mean"), pack.size.seq.100]
 	fivehun <- stats.arr[which(rownames(stats.arr)=="D_SL"), which(colnames(stats.arr)=="end.mean"), pack.size.seq.500]
 
-	plot(rep(1, 5), log(ones), xlim = c(0, 500))
-	points(rep(10, 5), log(tens))
-	points(rep(50, 5), log(fifty))
-	points(rep(100, 5), log(huns))
-	points(rep(500, 5), log(fivehun))
+	ymin <- min(stats.arr[which(rownames(stats.arr)=="D_SL"), which(colnames(stats.arr)=="end.mean"),])
+	ymax <- max(stats.arr[which(rownames(stats.arr)=="D_SL"), which(colnames(stats.arr)=="end.mean"),])
+
+plot.col <- c("red", "orange", "green", "blue", "purple")
+
+	plot(rep(1, 5), log(ones), xlim = c(0, 500), ylim = c(log(ymin), log(ymax)), col = plot.col[1], cex = 1.25)
+	points(rep(10, 5), log(tens), col = plot.col[2], cex = 1.25)
+	points(rep(50, 5), log(fifty), col = plot.col[3], cex = 1.25)
+	points(rep(100, 5), log(huns), col = plot.col[4], cex = 1.25)
+	points(rep(500, 5), log(fivehun), col = plot.col[5], cex = 1.25)
