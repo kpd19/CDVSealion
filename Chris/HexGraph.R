@@ -1,5 +1,5 @@
 # int.mat   takes the dog matrix at a single time
-# int.mat   takes the sea lion matrix at a single time
+# peri.mat   takes the sea lion matrix at a single time
 # coords   takes a matrix of coordinates for the cells in a hexgrid
 # NA.cells   takes a vector of cells that NA-ize the square matrix into a hexagon
 # cell.radius   takes a number representative of the radius from the center to the six points of a hexagon
