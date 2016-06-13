@@ -1,6 +1,6 @@
 # Hexagonal plotting
 This function allows you to plot your data as a hexagonal grid.  The list of arguments inclues
--`int.mat`   takes the dog matrix at a single time
+-int.mat   takes the dog matrix at a single time
 -`peri.mat`   takes the sea lion matrix at a single time
 -`coords`   takes a matrix of coordinates for the cells in a hexgrid
 -`NA.cells`   takes a vector of cells that NA-ize the square matrix into a hexagon
