@@ -1,4 +1,4 @@
-# Hexagonal plotting
+# Hexagonal plotting with HexGraph
 This function allows you to plot your data as a hexagonal grid.  The list of arguments inclues
 
 - `int.mat`   takes the dog matrix at a single time
